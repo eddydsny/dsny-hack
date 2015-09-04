@@ -1,41 +1,41 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
+<html data-ng-app="movieApp">
+<head lang="en">
 	<meta charset="utf-8">
-	<title>Team 1 - DSNY Hackathon</title>
-	<link rel="stylesheet" href="bower_components/Materialize/dist/css/materialize.css">
-	<link rel="stylesheet" href="css/app.css">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<base href="/"/>
+	<title>The Event Sequence App</title>
+	<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css"/>
+	<link rel="stylesheet" type="text/css" href="css/app.css"/>
 </head>
-<body ng-app="app">
-	
-	<div class="container root" ng-controller="appController">
-		<div class="row">
-			<div class="section col s12 m9 l10">
-				<h2 class="col s10 header">
-					Events
-				</h2>
-				<a class="waves-effect waves-light btn right">Update</a>
-				<div class="col s2 events-counter">
-					<h2 ng-bind="events.length"></h2>
-				</div>
-				<div class="col s12">
-					<div class="events-container">
-						<div ng-if="events.length">
-						</div>
-						<div ng-if="!events.length">
-							Event list is empty :(
-						</div>
-					</div>
-				</div>
-			</div>
+<body>
+<nav class="navbar navbar-default" role="navigation">
+	<div class="container-fluid">
+		<div class="navbar-header">
+			<a class="navbar-brand" ui-sref="movies">The Event Sequence App</a>
+		</div>
+		<div class="collapse navbar-collapse">
+			<ul class="nav navbar-nav">
+				<li class="active"><a ui-sref="movies">Home</a></li>
+			</ul>
 		</div>
 	</div>
-
-	<script src="bower_components/jquery/dist/jquery.js"></script>
-	<script src="bower_components/angular/angular.js"></script>
-	<script src="bower_components/Materialize/dist/js/materialize.js"></script>
-	<script src="js/app.js"></script>
-	<script src="js/controller.js"></script>
-
+</nav>
+<div class="container">
+	<div class="row top-buffer">
+		<div class="col-xs-8 col-xs-offset-2">
+			<div ui-view></div>
+		</div>
+	</div>
+</div>
+<script type="text/javascript" src="lib/angular.min.js"></script>
+<script type="text/javascript" src="js/app.js"></script>
+<script type="text/javascript" src="js/controllers.js"></script>
+<script type="text/javascript" src="js/services.js"></script>
+<script type="text/javascript" src="js/directives.js"></script>
+<script type="text/javascript" src="js/filters.js"></script>
+<script type="text/javascript" src="lib/angular-ui-router.min.js"></script>
+<script type="text/javascript" src="lib/angular-resource.min.js"></script>
 </body>
 </html>

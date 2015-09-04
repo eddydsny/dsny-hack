@@ -1,9 +1,14 @@
 package com.dsny.hack.service;
 
-import java.util.ArrayList;
+import java.text.SimpleDateFormat;
+import java.util.Date;
 import java.util.List;
+import java.util.Map;
+import java.util.Map.Entry;
+import java.util.stream.Collectors;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.scheduling.annotation.Scheduled;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Propagation;
 import org.springframework.transaction.annotation.Transactional;
@@ -13,31 +18,61 @@ import com.dsny.hack.persistence.repository.EventRepository;
 
 @Service
 public class EventProcessorImpl implements EventProcessor {
-	
+
 	@Autowired
 	EventRepository eventRepo;
-	
-	@Transactional(propagation=Propagation.REQUIRES_NEW)
-	void setEventProcessing(List<Event> events){
-		for(Event event: events){
+
+	@Transactional(propagation = Propagation.REQUIRES_NEW)
+	void setEventProcessing(List<Event> events) {
+		for (Event event : events) {
 			event.setStatus("Processing");
 		}
 		eventRepo.save(events);
 	}
-	
+
+	private static final SimpleDateFormat dateFormat = new SimpleDateFormat(
+			"HH:mm:ss");
+
+	@Scheduled(fixedRate = 5000)
 	@Transactional
-	public List<Event> processNewEvents() {
+	public void processNewEvents() {
+		System.out.println("The time is now " + dateFormat.format(new Date()));
+
 		List<Event> events = eventRepo.findByStatus("New");
-		List<Event> processedEvents = new ArrayList<Event>();
-		
-		//events.stream().map(mapper)
-		
-		for(Event event: events){
-			event.setStatus("Completed");
-			processedEvents.add(event);
+		// group by transactionID
+		Map<Long, List<Event>> eventMap = events.stream().collect(
+				Collectors.groupingBy(Event::getTransactionID));
+
+		if (eventMap.size() > 0) {
+			for (Entry<Long, List<Event>> entry : eventMap.entrySet()) {
+				boolean isAllEventReady = processEvents(entry.getValue());
+				if (isAllEventReady) {
+					entry.getValue().forEach((e) -> e.setStatus("Completed"));
+				} else {
+					entry.getValue().forEach((e) -> e.setStatus("New"));
+				}
+				eventRepo.save(entry.getValue());
+			}
 		}
-		
-		eventRepo.save(processedEvents);
-		return processedEvents;
+	}
+
+	boolean processEvents(List<Event> events) {
+		boolean isAllEventReady = true;
+		List<Event> sortedList = events
+				.stream()
+				.sorted((e1, e2) -> e1.getSequenceID().compareTo(
+						e2.getSequenceID())).collect(Collectors.toList());
+
+		int currentSequence = 0;
+		for (Event event : sortedList) {
+			if (currentSequence +1 != event.getSequenceID()) {
+				isAllEventReady = false;
+				break;
+			}else{
+				currentSequence = currentSequence + 1;
+			}
+		}
+
+		return isAllEventReady;
 	}
 }

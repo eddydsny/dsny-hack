@@ -1,8 +1,4 @@
-/**
- * Created by Sandeep on 01/06/14.
- */
-
-angular.module('movieApp.services',[]).factory('Movie',function($resource){
+angular.module('eventsApp.services',[]).factory('Event',function($resource){
     return $resource('/event/:id',{id:'@_id'},{
         update: {
             method: 'PUT'

@@ -1,16 +1,30 @@
 <div class="form-group">
-    <label for="title" class="col-sm-2 control-label">Type</label>
+    <label for="eventType" class="col-sm-2 control-label">Type</label>
     <div class="col-sm-10">
-        <input type="text" ng-model="movie.title" class="form-control" id="title" placeholder="Movie Title Here"/>
-    </div>
-</div>
-<div class="form-group">
-    <label for="year" class="col-sm-2 control-label">Sequence ID</label>
-    <div class="col-sm-10">
-        <input type="text" ng-model="movie.releaseYear" class="form-control" id="year" placeholder="When was the movie released?"/>
+        <input type="text" ng-model="event.type" class="form-control" id="eventType" placeholder="Type Here"/>
     </div>
 </div>
 
+<div class="form-group">
+    <label for="sequenceID" class="col-sm-2 control-label">Sequence ID</label>
+    <div class="col-sm-10">
+        <input type="number" ng-model="event.sequenceID" class="form-control" id="sequenceID" placeholder="sequenceID"/>
+    </div>
+</div>
+
+<div class="form-group">
+    <label for="description" class="col-sm-2 control-label">Description</label>
+    <div class="col-sm-10">
+        <input type="text" ng-model="event.description" class="form-control" id="description" placeholder="description Here"/>
+    </div>
+</div>
+
+<div class="form-group">
+    <label for="transactionID" class="col-sm-2 control-label">Sequence ID</label>
+    <div class="col-sm-10">
+        <input type="number" ng-model="event.transactionID" class="form-control" id="transactionID" placeholder="sequenceID"/>
+    </div>
+</div>
 
 <div class="form-group">
     <div class="col-sm-offset-2 col-sm-10">

@@ -1,26 +1,23 @@
-/**
- * Created by Sandeep on 01/06/14.
- */
 
-angular.module('movieApp',['ui.router','ngResource','movieApp.controllers','movieApp.services']);
+angular.module('eventsApp',['ui.router','ngResource','eventsApp.controllers','eventsApp.services']);
 
-angular.module('movieApp').config(function($stateProvider,$httpProvider){
+angular.module('eventsApp').config(function($stateProvider,$httpProvider){
     $stateProvider.state('events',{
         url:'/events',
         templateUrl:'/partials/events',
-        controller:'MovieListController'
-    }).state('viewMovie',{
+        controller:'EventListController'
+    }).state('viewEvent',{
        url:'/events/:id/view',
-       templateUrl:'partials/movie-view.html',
-       controller:'MovieViewController'
-    }).state('newMovie',{
+       templateUrl:'partials/event-view',
+       controller:'EventViewController'
+    }).state('newEvent',{
         url:'/events/new',
-        templateUrl:'partials/movie-add.html',
-        controller:'MovieCreateController'
-    }).state('editMovie',{
+        templateUrl:'partials/event-add',
+        controller:'EventCreateController'
+    }).state('editEvent',{
         url:'/events/:id/edit',
-        templateUrl:'partials/movie-edit.html',
-        controller:'MovieEditController'
+        templateUrl:'partials/event-edit',
+        controller:'EventEditController'
     });
 }).run(function($state){
    $state.go('events');

@@ -1,43 +1,43 @@
 /**
  * Created by Sandeep on 01/06/14.
  */
-angular.module('movieApp.controllers',[]).controller('MovieListController',function($scope,$state,popupService,$window,Movie){
+angular.module('eventsApp.controllers',[]).controller('EventListController',function($scope,$state,popupService,$window,Event){
 
-    $scope.movies=Movie.query();
+    $scope.events=Event.query();
 
-    $scope.deleteMovie=function(movie){
+    $scope.deleteEvent=function(event){
         if(popupService.showPopup('Really delete this?')){
-            movie.$delete(function(){
+            event.$delete(function(){
                 $window.location.href='';
             });
         }
     }
 
-}).controller('MovieViewController',function($scope,$stateParams,Movie){
+}).controller('EventViewController',function($scope,$stateParams,Event){
 
-    $scope.movie=Movie.get({id:$stateParams.id});
+    $scope.event=Event.get({id:$stateParams.id});
 
-}).controller('MovieCreateController',function($scope,$state,$stateParams,Movie){
+}).controller('EventCreateController',function($scope,$state,$stateParams,Event){
 
-    $scope.movie=new Movie();
+    $scope.event=new Event();
 
-    $scope.addMovie=function(){
-        $scope.movie.$save(function(){
-            $state.go('movies');
+    $scope.addEvent=function(){
+        $scope.event.$save(function(){
+            $state.go('event/list');
         });
     }
 
-}).controller('MovieEditController',function($scope,$state,$stateParams,Movie){
+}).controller('EventEditController',function($scope,$state,$stateParams,Event){
 
-    $scope.updateMovie=function(){
-        $scope.movie.$update(function(){
-            $state.go('movies');
+    $scope.updateEvent=function(){
+        $scope.event.$update(function(){
+            $state.go('events');
         });
     };
 
-    $scope.loadMovie=function(){
-        $scope.movie=Movie.get({id:$stateParams.id});
+    $scope.loadEvent=function(){
+        $scope.event=Event.get({id:$stateParams.id});
     };
 
-    $scope.loadMovie();
+    $scope.loadEvent();
 });

@@ -3,7 +3,7 @@ package com.dsny.hack.domain;
 import org.springframework.data.annotation.Id;
 
 public class Event {
-	
+
 	@Id
 	private String id;
 	private String type;
@@ -11,17 +11,17 @@ public class Event {
 	private Short sequenceID;
 	private String description;
 	private Long transactionID;
-	
-	//status (New, Complete, Processing)
+
+	// status (New, Complete, Processing)
 	private String status;
 
 	public Event() {
 		setStatus("New");
 	}
-	
-	public Event(String type, Short sequenceID) {
-		this.type=type;
-		this.sequenceID=sequenceID;
+
+	public Event(String type, short sequenceID) {
+		this.type = type;
+		this.sequenceID = sequenceID;
 		setStatus("New");
 	}
 

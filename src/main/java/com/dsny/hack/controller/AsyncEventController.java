@@ -9,7 +9,7 @@ import com.dsny.hack.domain.Event;
 import com.dsny.hack.service.EventService;
 
 @Controller
-public class MessageController {
+public class AsyncEventController {
 
 	@Autowired
 	EventService eventService;

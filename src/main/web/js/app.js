@@ -7,7 +7,7 @@ angular.module('movieApp',['ui.router','ngResource','movieApp.controllers','movi
 angular.module('movieApp').config(function($stateProvider,$httpProvider){
     $stateProvider.state('events',{
         url:'/events',
-        templateUrl:'partials/movies.html',
+        templateUrl:'/partials/events',
         controller:'MovieListController'
     }).state('viewMovie',{
        url:'/events/:id/view',

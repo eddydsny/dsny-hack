@@ -1,6 +1,4 @@
-/**
- * Created by Sandeep on 01/06/14.
- */
+
 angular.module('eventsApp.controllers',[]).controller('EventListController',function($scope,$state,popupService,$window,Event){
 
     $scope.events=Event.query();

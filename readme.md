@@ -1,7 +1,14 @@
 # Team 1 (William, Eddy, Brad)
 
 ### Overview
-Provides a solution for server-to-client requests that are consumed in order of a unique sequence identifier.
+This project illustrates the power of separating event creation and processing.  Events are collected from UI and processed in backend concurrently.
+
+Events are being processed by groups (group by transaction ID) in order (sequences in ascending order).
+
+### Event creation ###
+There are two ways to create Event
+1) Rest Enpoint
+2) Stomp message
 
 ### Installation
 
@@ -27,7 +34,7 @@ Start the node server by running:
 ```sh
 $ gulp server
 ```
-Then open sessions at http://localhost:9090/
+Then open sessions at http://localhost:8080/
 
 ### Java Server Endpoints
 

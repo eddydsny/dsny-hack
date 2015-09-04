@@ -30,14 +30,9 @@ public class EventProcessorImpl implements EventProcessor {
 		eventRepo.save(events);
 	}
 
-	private static final SimpleDateFormat dateFormat = new SimpleDateFormat(
-			"HH:mm:ss");
-
 	@Scheduled(fixedRate = 5000)
 	@Transactional
 	public void processNewEvents() {
-		System.out.println("The time is now " + dateFormat.format(new Date()));
-
 		List<Event> events = eventRepo.findByStatus("New");
 		// group by transactionID
 		Map<Long, List<Event>> eventMap = events.stream().collect(

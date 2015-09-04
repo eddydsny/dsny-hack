@@ -2,25 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ededffed-cb72-4617-a844-9b2ecf45f0a8" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/dsny/hack/service/EventProcessor.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/dsny/hack/service/EventProcessorImpl.java" />
-      <change type="MOVED" beforePath="C:\Users\wjiang\WebstormProjects\dsny-hack\src\main\java\com\dsny\hack\controller\MessageController.java" afterPath="$PROJECT_DIR$/src/main/java/com/dsny/hack/controller/AsyncEventController.java" />
-      <change type="MOVED" beforePath="C:\Users\wjiang\WebstormProjects\dsny-hack\src\main\web\partials\_form.html" afterPath="$PROJECT_DIR$/src/main/resources/templates/partials/_form.html" />
-      <change type="MOVED" beforePath="C:\Users\wjiang\WebstormProjects\dsny-hack\src\main\web\partials\movie-add.html" afterPath="$PROJECT_DIR$/src/main/resources/templates/partials/movie-add.html" />
-      <change type="MOVED" beforePath="C:\Users\wjiang\WebstormProjects\dsny-hack\src\main\web\partials\movie-edit.html" afterPath="$PROJECT_DIR$/src/main/resources/templates/partials/movie-edit.html" />
-      <change type="MOVED" beforePath="C:\Users\wjiang\WebstormProjects\dsny-hack\src\main\web\partials\movie-view.html" afterPath="$PROJECT_DIR$/src/main/resources/templates/partials/movie-view.html" />
-      <change type="MOVED" beforePath="C:\Users\wjiang\WebstormProjects\dsny-hack\src\main\web\partials\movies.html" afterPath="$PROJECT_DIR$/src/main/resources/templates/partials/events.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin/com/dsny/hack/DsnyhackApplication.class" afterPath="$PROJECT_DIR$/bin/com/dsny/hack/DsnyhackApplication.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/2.2.1/taskArtifacts/cache.properties.lock" afterPath="$PROJECT_DIR$/.gradle/2.2.1/taskArtifacts/cache.properties.lock" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/2.2.1/taskArtifacts/fileHashes.bin" afterPath="$PROJECT_DIR$/.gradle/2.2.1/taskArtifacts/fileHashes.bin" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/2.2.1/taskArtifacts/fileSnapshots.bin" afterPath="$PROJECT_DIR$/.gradle/2.2.1/taskArtifacts/fileSnapshots.bin" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/2.2.1/taskArtifacts/taskArtifacts.bin" afterPath="$PROJECT_DIR$/.gradle/2.2.1/taskArtifacts/taskArtifacts.bin" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/dsny/hack/DsnyhackApplication.java" afterPath="$PROJECT_DIR$/src/main/java/com/dsny/hack/DsnyhackApplication.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/dsny/hack/domain/Event.java" afterPath="$PROJECT_DIR$/src/main/java/com/dsny/hack/domain/Event.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/dsny/hack/persistence/repository/EventRepository.java" afterPath="$PROJECT_DIR$/src/main/java/com/dsny/hack/persistence/repository/EventRepository.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/dsny/hack/configuration/WebConfig.java" afterPath="$PROJECT_DIR$/src/main/java/com/dsny/hack/configuration/WebConfig.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/web/js/app.js" afterPath="$PROJECT_DIR$/src/main/web/js/app.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/templates/index.html" afterPath="$PROJECT_DIR$/src/main/resources/templates/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gitignore" afterPath="$PROJECT_DIR$/.gitignore" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.project" afterPath="$PROJECT_DIR$/.project" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.settings/org.eclipse.jdt.core.prefs" afterPath="$PROJECT_DIR$/.settings/org.eclipse.jdt.core.prefs" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.settings/org.eclipse.wst.common.component" afterPath="$PROJECT_DIR$/.settings/org.eclipse.wst.common.component" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="dsny-hack.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -51,10 +37,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="index.html" pinned="false" current-in-tab="true">
+      <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/resources/templates/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.35714287">
+            <state vertical-scroll-proportion="-6.5384617">
               <caret line="48" column="0" selection-start-line="48" selection-start-column="0" selection-end-line="48" selection-end-column="0" />
               <folding />
             </state>
@@ -83,6 +69,16 @@
           </provider>
         </entry>
       </file>
+      <file leaf-file-name=".gitignore" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/.gitignore">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.1431579">
+              <caret line="4" column="0" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
     </leaf>
   </component>
   <component name="FileTemplateManagerImpl">
@@ -101,7 +97,6 @@
       <list>
         <option value="$PROJECT_DIR$/src/main/web/package.json" />
         <option value="$PROJECT_DIR$/src/main/web/bower.json" />
-        <option value="$PROJECT_DIR$/.gitignore" />
         <option value="$PROJECT_DIR$/src/main/web/index2.html" />
         <option value="$PROJECT_DIR$/src/main/web/css/app.css" />
         <option value="$PROJECT_DIR$/src/main/web/css/index.css" />
@@ -114,6 +109,7 @@
         <option value="$PROJECT_DIR$/src/main/web/js/services.js" />
         <option value="$PROJECT_DIR$/src/main/web/js/app.js" />
         <option value="$PROJECT_DIR$/src/main/resources/templates/index.html" />
+        <option value="$PROJECT_DIR$/.gitignore" />
       </list>
     </option>
   </component>
@@ -491,14 +487,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/.gitignore">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="2" column="6" selection-start-line="2" selection-start-column="6" selection-end-line="2" selection-end-column="6" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/web/.gitignore">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -559,8 +547,16 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/templates/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.35714287">
+        <state vertical-scroll-proportion="-6.5384617">
           <caret line="48" column="0" selection-start-line="48" selection-start-column="0" selection-end-line="48" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.1431579">
+          <caret line="4" column="0" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
           <folding />
         </state>
       </provider>

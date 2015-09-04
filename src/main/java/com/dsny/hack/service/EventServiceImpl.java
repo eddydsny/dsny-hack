@@ -25,12 +25,12 @@ public class EventServiceImpl implements EventService {
 	}
 	 
 	 @Override
-	public Event findByID(Long id) {
+	public Event findByID(String id) {
 		return eventRepo.findOne(id);
 	}
 	 
 	 @Override
-	public void delete(long id) {
+	public void delete(String id) {
 		 eventRepo.delete(id);
 	}
 	 

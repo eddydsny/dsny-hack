@@ -10,9 +10,9 @@ public interface EventService {
 	
 	Event create(Event event);
 	
-	Event findByID(Long id);
+	Event findByID(String id);
 
 	Event update(Event event);
 
-	void delete(long id);
+	void delete(String id);
 }

@@ -34,7 +34,7 @@ public class EventController {
 	}
 	
 	@RequestMapping(value="/{id}", method=RequestMethod.GET)
-	public Event get(@PathVariable("id") long id) {
+	public Event get(@PathVariable("id") String id) {
 		return eventService.findByID(id);
 	}
 	
@@ -45,7 +45,7 @@ public class EventController {
 	}
 	
 	@RequestMapping(value="/{id}", method=RequestMethod.DELETE)
-	public ResponseEntity<Boolean> delete(@PathVariable("id") long id) {
+	public ResponseEntity<Boolean> delete(@PathVariable("id") String id) {
 		eventService.delete(id);
 		return new ResponseEntity<Boolean>(Boolean.TRUE, HttpStatus.OK);
 	}

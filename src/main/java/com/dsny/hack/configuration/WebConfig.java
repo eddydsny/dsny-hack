@@ -22,6 +22,10 @@ public class WebConfig extends WebMvcConfigurerAdapter {
 	@Override
 	public void addViewControllers(ViewControllerRegistry registry) {
 		registry.addViewController("/partials/events").setViewName("partials/events");
+		registry.addViewController("/partials/event-add").setViewName("partials/event-add");
+		registry.addViewController("/partials/event-edit").setViewName("partials/event-edit");
+		registry.addViewController("/partials/event-view").setViewName("partials/event-view");
+		registry.addViewController("/partials/_form").setViewName("partials/_form");
 	}
 
 }

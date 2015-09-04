@@ -3,25 +3,25 @@ package com.dsny.hack.domain;
 import org.springframework.data.annotation.Id;
 
 public class Event {
-	
+
 	@Id
 	private String id;
 	private String type;
-	//Sequence ID is 1 base,
+	// Sequence ID is 1 base,
 	private short sequenceID;
 	private String description;
 	private Long transactionID;
-	
-	//status (New, Complete, Processing)
+
+	// status (New, Complete, Processing)
 	private String status;
 
 	public Event() {
 		setStatus("New");
 	}
-	
+
 	public Event(String type, short sequenceID) {
-		this.type=type;
-		this.sequenceID=sequenceID;
+		this.type = type;
+		this.sequenceID = sequenceID;
 		setStatus("New");
 	}
 

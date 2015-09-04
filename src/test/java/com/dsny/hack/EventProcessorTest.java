@@ -1,5 +1,8 @@
 package com.dsny.hack;
 
+import java.util.concurrent.TimeUnit;
+
+import org.junit.Assert;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -16,11 +19,22 @@ import com.dsny.hack.service.EventService;
 public class EventProcessorTest {
 	
 	@Autowired
-	private EventService enventService;
+	private EventService eventService;
 	
 	@Test
-	public void processEvents(){
-		Event event = new Event("social", (short)1, 1);
-	
+	public void processEvents() throws Exception{
+		Event eventOne = new Event("social", (short)1, 1);
+		Event eventTwo = new Event("social", (short)2, 1);
+		
+		eventOne = eventService.create(eventOne);
+		eventTwo = eventService.create(eventTwo);
+		
+		Assert.assertEquals("New", eventOne.getStatus());
+		Assert.assertEquals("New", eventTwo.getStatus());
+		
+		TimeUnit.SECONDS.sleep(35L);
+		
+		Assert.assertEquals("Completed", eventService.findByID(eventOne.getId()).getStatus());
+		Assert.assertEquals("Completed", eventService.findByID(eventTwo.getId()).getStatus());
 	}
 }

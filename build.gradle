@@ -18,13 +18,24 @@ apply plugin: 'spring-boot'
 apply plugin: 'io.spring.dependency-management' 
 apply plugin: 'war'
 
-
 war {
     baseName = 'hack2'
     version = '0.0.1-SNAPSHOT'
 }
+
 sourceCompatibility = 1.8
 targetCompatibility = 1.8
+
+sourceSets {
+	main {
+		java {
+			srcDirs = ["src/main/java"]
+		}
+		resources {
+			srcDirs = ["src/main/resources", "src/main/web"]
+		}
+	}
+}
 
 repositories {
     mavenCentral()
@@ -37,6 +48,9 @@ configurations {
 dependencies {
     compile("org.springframework.boot:spring-boot-starter-data-mongodb")
     compile("org.springframework.boot:spring-boot-starter-web")
+	compile("org.springframework.boot:spring-boot-starter-websocket")
+	compile("org.springframework.boot:spring-boot-starter-thymeleaf")
+	compile("org.springframework:spring-messaging")
     providedRuntime("org.springframework.boot:spring-boot-starter-tomcat")
     testCompile("org.springframework.boot:spring-boot-starter-test") 
 }

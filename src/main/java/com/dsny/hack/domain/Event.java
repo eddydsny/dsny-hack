@@ -5,22 +5,30 @@ import org.springframework.data.annotation.Id;
 public class Event {
 	
 	@Id
-	private Long id;
-	private final String type;
+	private String id;
+	private String type;
 	//Sequence ID is 1 base,
-	private final short sequenceID;
+	private short sequenceID;
 	private String description;
+	
+	//status (New, Complete, Processing)
+	private String status;
+
+	public Event() {
+		setStatus("New");
+	}
 	
 	public Event(String type, short sequenceID) {
 		this.type=type;
 		this.sequenceID=sequenceID;
+		setStatus("New");
 	}
 
-	public Long getId() {
+	public String getId() {
 		return id;
 	}
 
-	public void setId(Long id) {
+	public void setId(String id) {
 		this.id = id;
 	}
 
@@ -38,5 +46,13 @@ public class Event {
 
 	public short getSequenceID() {
 		return sequenceID;
+	}
+
+	public String getStatus() {
+		return status;
+	}
+
+	public void setStatus(String status) {
+		this.status = status;
 	}
 }

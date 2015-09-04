@@ -8,7 +8,7 @@ public class Event {
 	private String id;
 	private String type;
 	//Sequence ID is 1 base,
-	private short sequenceID;
+	private Short sequenceID;
 	private String description;
 	private Long transactionID;
 	
@@ -19,7 +19,7 @@ public class Event {
 		setStatus("New");
 	}
 	
-	public Event(String type, short sequenceID) {
+	public Event(String type, Short sequenceID) {
 		this.type=type;
 		this.sequenceID=sequenceID;
 		setStatus("New");
@@ -45,7 +45,7 @@ public class Event {
 		return type;
 	}
 
-	public short getSequenceID() {
+	public Short getSequenceID() {
 		return sequenceID;
 	}
 
@@ -63,5 +63,13 @@ public class Event {
 
 	public void setTransactionID(Long transactionID) {
 		this.transactionID = transactionID;
+	}
+
+	public void setType(String type) {
+		this.type = type;
+	}
+
+	public void setSequenceID(Short sequenceID) {
+		this.sequenceID = sequenceID;
 	}
 }

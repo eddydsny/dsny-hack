@@ -15,11 +15,13 @@ public class WebConfig extends WebMvcConfigurerAdapter {
 		.addResourceLocations("classpath:/bower_components/angular/")
 		.addResourceLocations("classpath:/bower_components/jquery/dist/")
 		.addResourceLocations("classpath:/css/")
+		.addResourceLocations("classpath:/lib/")
 		.addResourceLocations("classpath:/js/"); 
 	}
 
 	@Override
 	public void addViewControllers(ViewControllerRegistry registry) {
+		registry.addViewController("/partials/events").setViewName("partials/events");
 	}
 
 }

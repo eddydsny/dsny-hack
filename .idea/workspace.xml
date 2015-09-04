@@ -2,6 +2,24 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ededffed-cb72-4617-a844-9b2ecf45f0a8" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/dsny/hack/service/EventProcessor.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/dsny/hack/service/EventProcessorImpl.java" />
+      <change type="MOVED" beforePath="C:\Users\wjiang\WebstormProjects\dsny-hack\src\main\java\com\dsny\hack\controller\MessageController.java" afterPath="$PROJECT_DIR$/src/main/java/com/dsny/hack/controller/AsyncEventController.java" />
+      <change type="MOVED" beforePath="C:\Users\wjiang\WebstormProjects\dsny-hack\src\main\web\partials\_form.html" afterPath="$PROJECT_DIR$/src/main/resources/templates/partials/_form.html" />
+      <change type="MOVED" beforePath="C:\Users\wjiang\WebstormProjects\dsny-hack\src\main\web\partials\movie-add.html" afterPath="$PROJECT_DIR$/src/main/resources/templates/partials/movie-add.html" />
+      <change type="MOVED" beforePath="C:\Users\wjiang\WebstormProjects\dsny-hack\src\main\web\partials\movie-edit.html" afterPath="$PROJECT_DIR$/src/main/resources/templates/partials/movie-edit.html" />
+      <change type="MOVED" beforePath="C:\Users\wjiang\WebstormProjects\dsny-hack\src\main\web\partials\movie-view.html" afterPath="$PROJECT_DIR$/src/main/resources/templates/partials/movie-view.html" />
+      <change type="MOVED" beforePath="C:\Users\wjiang\WebstormProjects\dsny-hack\src\main\web\partials\movies.html" afterPath="$PROJECT_DIR$/src/main/resources/templates/partials/events.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin/com/dsny/hack/DsnyhackApplication.class" afterPath="$PROJECT_DIR$/bin/com/dsny/hack/DsnyhackApplication.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/2.2.1/taskArtifacts/cache.properties.lock" afterPath="$PROJECT_DIR$/.gradle/2.2.1/taskArtifacts/cache.properties.lock" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/2.2.1/taskArtifacts/fileHashes.bin" afterPath="$PROJECT_DIR$/.gradle/2.2.1/taskArtifacts/fileHashes.bin" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/2.2.1/taskArtifacts/fileSnapshots.bin" afterPath="$PROJECT_DIR$/.gradle/2.2.1/taskArtifacts/fileSnapshots.bin" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/2.2.1/taskArtifacts/taskArtifacts.bin" afterPath="$PROJECT_DIR$/.gradle/2.2.1/taskArtifacts/taskArtifacts.bin" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/dsny/hack/DsnyhackApplication.java" afterPath="$PROJECT_DIR$/src/main/java/com/dsny/hack/DsnyhackApplication.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/dsny/hack/domain/Event.java" afterPath="$PROJECT_DIR$/src/main/java/com/dsny/hack/domain/Event.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/dsny/hack/persistence/repository/EventRepository.java" afterPath="$PROJECT_DIR$/src/main/java/com/dsny/hack/persistence/repository/EventRepository.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/dsny/hack/configuration/WebConfig.java" afterPath="$PROJECT_DIR$/src/main/java/com/dsny/hack/configuration/WebConfig.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/web/js/app.js" afterPath="$PROJECT_DIR$/src/main/web/js/app.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/templates/index.html" afterPath="$PROJECT_DIR$/src/main/resources/templates/index.html" />
     </list>
     <ignored path="dsny-hack.iws" />
@@ -33,30 +51,20 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
+      <file leaf-file-name="index.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/resources/templates/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-7.1923075">
-              <caret line="36" column="59" selection-start-line="36" selection-start-column="59" selection-end-line="36" selection-end-column="59" />
+            <state vertical-scroll-proportion="0.35714287">
+              <caret line="48" column="0" selection-start-line="48" selection-start-column="0" selection-end-line="48" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="movies.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/web/partials/movies.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-6.5384617">
-              <caret line="10" column="60" selection-start-line="10" selection-start-column="49" selection-end-line="10" selection-end-column="60" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="app.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="app.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/web/js/app.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.3873874">
+            <state vertical-scroll-proportion="-2.9655173">
               <caret line="16" column="26" selection-start-line="16" selection-start-column="26" selection-end-line="16" selection-end-column="26" />
               <folding />
             </state>
@@ -196,32 +204,6 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="web" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="dsny-hack" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="dsny-hack" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="web" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="partials" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -567,26 +549,18 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-7.1923075">
-          <caret line="36" column="59" selection-start-line="36" selection-start-column="59" selection-end-line="36" selection-end-column="59" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/web/partials/movies.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-6.5384617">
-          <caret line="10" column="60" selection-start-line="10" selection-start-column="49" selection-end-line="10" selection-end-column="60" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/web/js/app.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.3873874">
+        <state vertical-scroll-proportion="-2.9655173">
           <caret line="16" column="26" selection-start-line="16" selection-start-column="26" selection-end-line="16" selection-end-column="26" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.35714287">
+          <caret line="48" column="0" selection-start-line="48" selection-start-column="0" selection-end-line="48" selection-end-column="0" />
           <folding />
         </state>
       </provider>

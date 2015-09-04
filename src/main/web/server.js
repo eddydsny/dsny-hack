@@ -7,7 +7,7 @@ module.exports = function () {
 	connect.server({
 		host: 'localhost',
 		root: './',
-		livereload: true,
+		livereload: false,
 		directoryListing: true,
 		port: 9090,
 		middleware: function () {

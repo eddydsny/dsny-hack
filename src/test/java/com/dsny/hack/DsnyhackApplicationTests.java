@@ -14,5 +14,4 @@ public class DsnyhackApplicationTests {
 	@Test
 	public void contextLoads() {
 	}
-
 }

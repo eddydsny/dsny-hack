@@ -1,7 +1,5 @@
 package com.dsny.hack.service;
 
-import java.text.SimpleDateFormat;
-import java.util.Date;
 import java.util.List;
 import java.util.Map;
 import java.util.Map.Entry;
@@ -30,21 +28,16 @@ public class EventProcessorImpl implements EventProcessor {
 		eventRepo.save(events);
 	}
 
-	private static final SimpleDateFormat dateFormat = new SimpleDateFormat(
-			"HH:mm:ss");
-
 	@Scheduled(fixedRate = 5000)
 	@Transactional
 	public void processNewEvents() {
-		System.out.println("The time is now " + dateFormat.format(new Date()));
-
 		List<Event> events = eventRepo.findByStatus("New");
 		// group by transactionID
-		Map<Long, List<Event>> eventMap = events.stream().collect(
+		Map<Integer, List<Event>> eventMap = events.stream().collect(
 				Collectors.groupingBy(Event::getTransactionID));
 
 		if (eventMap.size() > 0) {
-			for (Entry<Long, List<Event>> entry : eventMap.entrySet()) {
+			for (Entry<Integer, List<Event>> entry : eventMap.entrySet()) {
 				boolean isAllEventReady = processEvents(entry.getValue());
 				if (isAllEventReady) {
 					entry.getValue().forEach((e) -> e.setStatus("Completed"));

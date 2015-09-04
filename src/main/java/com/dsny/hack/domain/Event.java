@@ -10,7 +10,7 @@ public class Event {
 	//Sequence ID is 1 base,
 	private Short sequenceID;
 	private String description;
-	private Long transactionID;
+	private int transactionID;
 
 	// status (New, Complete, Processing)
 	private String status;
@@ -19,9 +19,10 @@ public class Event {
 		setStatus("New");
 	}
 
-	public Event(String type, short sequenceID) {
+	public Event(String type, short sequenceID, int transactionID) {
 		this.type = type;
 		this.sequenceID = sequenceID;
+		this.transactionID = transactionID;
 		setStatus("New");
 	}
 
@@ -57,11 +58,11 @@ public class Event {
 		this.status = status;
 	}
 
-	public Long getTransactionID() {
+	public int getTransactionID() {
 		return transactionID;
 	}
 
-	public void setTransactionID(Long transactionID) {
+	public void setTransactionID(int transactionID) {
 		this.transactionID = transactionID;
 	}
 

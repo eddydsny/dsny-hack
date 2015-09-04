@@ -1,7 +1,7 @@
 
-angular.module('eventsApp.controllers',[]).controller('EventListController',function($scope,$state,popupService,$window,Event){
+angular.module('eventsApp.controllers',[]).controller('EventListController',function($scope,$state,popupService,$window,Event, Events){
 
-    $scope.events=Event.query();
+    $scope.events=Events.query();
 
     $scope.deleteEvent=function(event){
         if(popupService.showPopup('Really delete this?')){

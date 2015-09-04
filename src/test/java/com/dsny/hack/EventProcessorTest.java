@@ -36,5 +36,5 @@ public class EventProcessorTest {
 		
 		Assert.assertEquals("Completed", eventService.findByID(eventOne.getId()).getStatus());
 		Assert.assertEquals("Completed", eventService.findByID(eventTwo.getId()).getStatus());
-	}
+	}	
 }

@@ -7,7 +7,7 @@ angular.module('eventsApp').config(function($stateProvider,$httpProvider){
         templateUrl:'/partials/events',
         controller:'EventListController'
     }).state('viewEvent',{
-       url:'/events/:id/view',
+       url:'/event/:id',
        templateUrl:'partials/event-view',
        controller:'EventViewController'
     }).state('newEvent',{

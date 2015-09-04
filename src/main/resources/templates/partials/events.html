@@ -14,7 +14,7 @@
         <td>{{event.description}}</td>
         <td>{{event.transactionID}}</td>
         <td>
-            <a class="btn btn-primary" ui-sref="viewEvent({id:event._id})">View</a>
+            <a class="btn btn-primary" ui-sref="viewEvent({id:event.id})">View</a>
             <a class="btn btn-danger"  ng-click="deleteEvent(event)">Delete</a>
         </td>
     </tr>

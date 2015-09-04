@@ -1,6 +1,6 @@
 angular.module('eventsApp.services', [])
     .factory('Event', function ($resource) {
-        return $resource('/event/:id', {id: '@_id'}, {
+        return $resource('http://localhost:8080/event/:id', {id: '@id'}, {
             update: {
                 method: 'PUT'
             }

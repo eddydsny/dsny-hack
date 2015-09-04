@@ -23,7 +23,7 @@ public class EventController {
 	@Autowired
 	private EventService eventService;
 	
-	@RequestMapping()
+	@RequestMapping("list")
 	public List<Event> list(){
 		return eventService.getEvents();
 	}

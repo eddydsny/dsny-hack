@@ -1,9 +1,7 @@
-/**
- * Created by Sandeep on 01/06/14.
- */
-angular.module('eventsApp.controllers',[]).controller('EventListController',function($scope,$state,popupService,$window,Event){
 
-    $scope.events=Event.query();
+angular.module('eventsApp.controllers',[]).controller('EventListController',function($scope,$state,popupService,$window,Event, Events){
+
+    $scope.events=Events.query();
 
     $scope.deleteEvent=function(event){
         if(popupService.showPopup('Really delete this?')){
@@ -23,7 +21,7 @@ angular.module('eventsApp.controllers',[]).controller('EventListController',func
 
     $scope.addEvent=function(){
         $scope.event.$save(function(){
-            $state.go('event/list');
+            $state.go('events');
         });
     }
 

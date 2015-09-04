@@ -1,8 +1,12 @@
 <a ui-sref="newEvent" class="btn-primary btn-lg nodecoration">Add New Event</a>
+
 <table class="table movietable">
+    <caption><h3>All Events</h3></caption>
     <tr>
-        <td><h3>All Events</h3></td>
-        <td>{{events}}</td>
+        <th>Type</th>
+        <th>Sequence ID</th>
+        <th>Description</th>
+        <th>TransactionID ID</th>
     </tr>
     <tr ng-repeat="event in events">
         <td><a ui-sref="viewEvent({id:event.id})">{{event.type}}</a></td>

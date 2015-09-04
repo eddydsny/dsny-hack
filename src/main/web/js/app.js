@@ -15,7 +15,7 @@ angular.module('eventsApp').config(function($stateProvider,$httpProvider){
         templateUrl:'partials/event-add',
         controller:'EventCreateController'
     }).state('editEvent',{
-        url:'/events/:id/edit',
+        url:'/event/:id',
         templateUrl:'partials/event-edit',
         controller:'EventEditController'
     });

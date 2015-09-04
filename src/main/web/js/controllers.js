@@ -21,7 +21,7 @@ angular.module('eventsApp.controllers',[]).controller('EventListController',func
 
     $scope.addEvent=function(){
         $scope.event.$save(function(){
-            $state.go('event/list');
+            $state.go('events');
         });
     }
 
